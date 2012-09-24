@@ -7,8 +7,8 @@ For now, only the caption element run the following algorithm
 
 ## Term Definition
 
-*title* : _HTMLElement_ Use to represent the text that an description is added to. Similar concept as the summary element.
-*description*: _HTMLCollection_ Represent all the element that would describe the title. Eg, the content of the details element excluding the summary element
+* **title** : _HTMLElement_ Use to represent the text that an description is added to. Similar concept as the summary element.
+* **description**: _HTMLCollection_ Represent all the element that would describe the title. Eg, the content of the details element excluding the summary element
 
 ## Algorithm
 
