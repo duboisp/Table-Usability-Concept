@@ -20,15 +20,15 @@ The header colgroup and summary colgroup relationships would be defined just bef
 * Initiate an HTMLTableGroupElement interface for the current colgroup.
 * Set the appropriate colgroup starting position, based on the previous parsed colgroup element. _(used for internal reference)_
 * For each col element
-** Initiate an HTMLTableVectorElement
-** Set the appropriate colgroup starting position, based on the previous parsed colgroup element and on the previous parsed col element. _(used for internal reference)_
-** Set the appropriate column width if application with his span attribute.
-** Add the HTMLTableVectorElement in the HTMLTableGroupElement
+  * Initiate an HTMLTableVectorElement
+  * Set the appropriate colgroup starting position, based on the previous parsed colgroup element and on the previous parsed col element. _(used for internal reference)_
+  * Set the appropriate column width if application with his span attribute.
+  * Add the HTMLTableVectorElement in the HTMLTableGroupElement
 * No col element found
-** Calculate the width of the colgroup with his span attribute.
-** Create an HTMLTableVectorElement for each column that his colgroup are convering.
-** Set a width of one for the column
-** Add the HTMLTableVectorElement in the HTMLTableGroupElement
+  * Calculate the width of the colgroup with his span attribute.
+  * Create an HTMLTableVectorElement for each column that his colgroup are convering.
+  * Set a width of one for the column
+  * Add the HTMLTableVectorElement in the HTMLTableGroupElement
 * Stack the HTMLTableDataGroup. _(The colgroup structure would be validated later)_
 
 ## Existing Implementation
