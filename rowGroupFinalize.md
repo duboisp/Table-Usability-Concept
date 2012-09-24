@@ -1,0 +1,15 @@
+Finalizing a Row Group - Table Parsing Algorithm
+=======================
+
+## Algorithm
+
+* Ensure the Row Group Setup algorithm has be run on the current row group 
+* Add the current row group in the HTMLTableElement
+
+
+## Existing Implementation
+
+[finalizeRowGroup](https://github.com/wet-boew/wet-boew/blob/master/src/js/workers/parser.table.js#L790)
+
+-----
+_HTML5 specification refer to the Editor's Draft dated of September 21 2012, $Revision 1.1998 $_
