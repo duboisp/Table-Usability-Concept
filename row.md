@@ -32,8 +32,53 @@ The begin of this algorithm is the similar as the [algorithm for processing rows
 * The last cell is an data cell 
 * Mark the row as data row
 * Flag that the header row group is finished
-
-* td cell used as description for the preceding row header
+* If the previous row is a header row and it's contain a group header cell
+	* If the first cell equal the last cell
+		* Associate this cell as the description of the previous group header cell
+		* exit
+* Run the row group setup algorithm if the current group have not being processed
+* Get the last highest column position of the cell header (lastHeadingColPos) _(th element)_
+	* If there the colgroup element is used, let the lastHeadingColPos to be the width of the first colgroup. The first colgroup span can be the calculated lastHeadingColPos or the calculated lastHeadingColPos more "1" position. 
+* If the current row is the first data row, the value of lastHeadingColPos would be used to determine if there is an change about data vs summary row
+* If the current row is the second or subsequent data row
+	* If the lastHeadingColPos do not equal to the lastHeadingColPos of the preceding data row
+		* If the lastHeadingColPos do not exist for a data summary row
+			* Let the current lastHeadingColPos to be the patern for a data summary row
+			* Finalise the row group
+			* Initiate the row group
+			* Row group setup
+		* If a summary partern is know and the current lastHeadingColPos match the lastHeadingColPos for the previous data row
+			* Finalise the row group
+			* Initiate the row group
+			* Force the row group setup to be a data row group
+			* Raise a warning that this data row group are not identified by a group header cell
+		* else
+			* Raise an structural error, only two row partern can be defined per data table
+* From the column 1 until the lastHeadingColPos
+	* If the current cell is a data cell
+		* If the cell at column pos minus 1 is an header cell
+			* If both cell get a match as per his height
+				* Mark the current cell as a description cell
+	* If the current cell is an header cell
+		* From column position 1 to the current cell column position 
+			* If there is a data cell that match his height
+				* Let the first cell found to be his associated key cell
+				* For subsequent matching cell, Raise an structural error because may be those cell can be data cell.
+			* If there is a header cell that his height is higher or equal to the current cell
+				* Set the relationships between both header cell. The current header cell would be a children.
+* If there is lastHeadingColPos is undefined and there is no colgroup element defined
+	* Create one colgroup with column that cover the table width (Process Colgroup algorithm)
+* Run the row group header algorithm based on the lastHeadingColPos _(It's here where the colgroup and the row group header is validated)_
+* From the column lastHeadingColPos more "1" to the last column
+	* Navigate along with the corresponding column group for the current cell
+		* Let's the data cell type to match the row type (summary or data) with the column group type (summary or data)
+		* If the row type is summary and the colgroup type is summary and the current cell cover both group as per width and height
+			* If the current cell is an empty cell, mark it as a layout cell
+	* If there is column group, assume we have data column group
+	* Set the associate any row cell heading that is out of scope of the current cell when the current cell height is larger than 1 row
+* Associate each cell from the current row to the appropriate column
+* Associate the row and column level to each cell from the current row
+	* Set any additional column header associated to the current cell when his width is larger than 1 column
 
 
 
