@@ -68,7 +68,7 @@ The begin of this algorithm is the similar as the [algorithm for processing rows
 				* Set the relationships between both header cell. The current header cell would be a children.
 * If there is lastHeadingColPos is undefined and there is no colgroup element defined
 	* Create one colgroup with column that cover the table width (Process Colgroup algorithm)
-* Run the row group header algorithm based on the lastHeadingColPos _(It's here where the colgroup and the row group header is validated)_
+* Run the row group header algorithm based on the lastHeadingColPos _(This would validate the colgroup structure)_
 * From the column lastHeadingColPos more "1" to the last column
 	* Navigate along with the corresponding column group for the current cell
 		* Let's the data cell type to match the row type (summary or data) with the column group type (summary or data)
