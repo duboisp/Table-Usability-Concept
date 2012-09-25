@@ -3,7 +3,7 @@ Initiating a Row Group - Table Parsing Algorithm
 
 ## Algorithm
 
-* Finalise the current row group with the algorithm for closing an row group, if applicable. 
+* Finalise the current row group with the algorithm for [Finalizing a row group](https://github.com/duboisp/Table-Usability-Concept/blob/master/rowGroupFinalize.md), if applicable. 
 * Initiate a new HTMLTableGroupElement interface
 
 ## Existing Implementation

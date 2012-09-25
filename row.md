@@ -16,7 +16,7 @@ The begin of this algorithm is the similar as the [algorithm for processing rows
 ## Algorithm
 
 * Get an array where the length is the table width and each items are refering to an cell. This is based on the cell contained in the current table row.
-* If the row is processed under the thead algorithm: stack the row and exit
+* If the row is processed under the [thead algorithm](https://github.com/duboisp/Table-Usability-Concept/blob/master/thead.md): stack the row and exit
 * If the last cell is an header cell
 	* Mark the row as an header row
 	* If the first cell not equal the last cell
@@ -36,21 +36,21 @@ The begin of this algorithm is the similar as the [algorithm for processing rows
 	* If the first cell equal the last cell
 		* Associate this cell as the description of the previous group header cell
 		* exit
-* Run the row group setup algorithm if the current group have not being processed
-* Get the last highest column position of the cell header (lastHeadingColPos) _(th element)_
-	* If there the colgroup element is used, let the lastHeadingColPos to be the width of the first colgroup. The first colgroup span can be the calculated lastHeadingColPos or the calculated lastHeadingColPos more "1" position. 
+* if the current group have not being processed: Run the [row group setup algorithm](https://github.com/duboisp/Table-Usability-Concept/blob/master/rowGroupSetup.md) 
+* Get the last highest column position of the cell header (called here lastHeadingColPos) _(last th element column position)_
+	* If there the colgroup element is used, let the lastHeadingColPos to be the width of the first colgroup if the first colgroup width is the same as the  lastHeadingColPos or the lastHeadingColPos plus "1". 
 * If the current row is the first data row, the value of lastHeadingColPos would be used to determine if there is an change about data vs summary row
 * If the current row is the second or subsequent data row
 	* If the lastHeadingColPos do not equal to the lastHeadingColPos of the preceding data row
 		* If the lastHeadingColPos do not exist for a data summary row
 			* Let the current lastHeadingColPos to be the patern for a data summary row
-			* Finalise the row group
-			* Initiate the row group
-			* Row group setup
+			* [Finalise the row group](https://github.com/duboisp/Table-Usability-Concept/blob/master/rowGroupFinalize.md)
+			* [Initiate the row group](https://github.com/duboisp/Table-Usability-Concept/blob/master/rowGroupInitialize.md)
+			* [Row group setup](https://github.com/duboisp/Table-Usability-Concept/blob/master/rowGroupSetup.md)
 		* If a summary partern is know and the current lastHeadingColPos match the lastHeadingColPos for the previous data row
-			* Finalise the row group
-			* Initiate the row group
-			* Force the row group setup to be a data row group
+			* [Finalise the row group](https://github.com/duboisp/Table-Usability-Concept/blob/master/rowGroupFinalize.md)
+			* [Initiate the row group](https://github.com/duboisp/Table-Usability-Concept/blob/master/rowGroupInitialize.md)
+			* Force the [row group setup](https://github.com/duboisp/Table-Usability-Concept/blob/master/rowGroupSetup.md) to be a data row group
 			* Raise a warning that this data row group are not identified by a group header cell
 		* else
 			* Raise an structural error, only two row partern can be defined per data table
@@ -67,8 +67,8 @@ The begin of this algorithm is the similar as the [algorithm for processing rows
 			* If there is a header cell that his height is higher or equal to the current cell
 				* Set the relationships between both header cell. The current header cell would be a children.
 * If there is lastHeadingColPos is undefined and there is no colgroup element defined
-	* Create one colgroup with column that cover the table width (Process Colgroup algorithm)
-* Run the row group header algorithm based on the lastHeadingColPos _(This would validate the colgroup structure)_
+	* Create one colgroup with column that cover the table width
+* Run the [row group header algorithm](https://github.com/duboisp/Table-Usability-Concept/blob/master/processRowGroupHeaders.md) based on the lastHeadingColPos _(This would validate the colgroup structure)_
 * From the column lastHeadingColPos more "1" to the last column
 	* Navigate along with the corresponding column group for the current cell
 		* Let's the data cell type to match the row type (summary or data) with the column group type (summary or data)
@@ -79,10 +79,6 @@ The begin of this algorithm is the similar as the [algorithm for processing rows
 * Associate each cell from the current row to the appropriate column
 * Associate the row and column level to each cell from the current row
 	* Set any additional column header associated to the current cell when his width is larger than 1 column
-
-
-
-
 
 
 ## Existing Implementation

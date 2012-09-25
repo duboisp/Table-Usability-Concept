@@ -3,7 +3,7 @@ Finalizing a Row Group - Table Parsing Algorithm
 
 ## Algorithm
 
-* Ensure the Row Group Setup algorithm has be run on the current row group 
+* Ensure the [Row Group Setup algorithm](https://github.com/duboisp/Table-Usability-Concept/blob/master/rowGroupSetup.md) has be run on the current row group 
 * Add the current row group in the HTMLTableElement
 
 

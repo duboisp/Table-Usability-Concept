@@ -3,25 +3,25 @@ Process Row Group Headers - Table Parsing Algorithm
 
 ## Purpose
 
-Validate the colgroup markup agains the cell headers defined in the header row group.
+Define the row group header and validate the colgroup markup agains the cell headers defined in the header row group.
 
 ## Algorithm
 
 * If the there is an lastHeadingColPos, the first colgroup should match.
 	* if false: Raise an structural error and reset the colgroup structure 
 * Associate any descriptive cell with the cell header above.
-The following algorithm are not considerating any row used to provide a description for cell headers.
-* If there is no colgroup structure
+The following algorithm are not considerating any row included in the row group header that are providing a description for cell headers.
+* If the table markup do not have any colgroup defined
 	This can result to one colgroup or two colgroup only
 	* Create the new colgroup and col structure by taking in consideration the lastHeadingColPos
-* else there is an existing colgroup structure
+* else the table markup have colgroup element defined
 	* For each colgroup element
 		* If a summary group at level 0 already exist
 			* Raise an structural error
 			* return
 		* If is the first colgroup and lastHeadingColPos is greater than 0
 			* Mark the current colgroup as the header group
-			* return
+			* go to the next colgroup
 		* Get the colgroup data level
 			The colgroup level is calculated by the row position of the larger (width) cell header that cover the colgroup but closer to the colgroup width. 
 		* If the colgroup data level is undefined, let the colgroup data level to be 1
@@ -40,7 +40,6 @@ The following algorithm are not considerating any row used to provide a descript
 		* For each col defined in the current colgroup
 			* Assign the type and the level defined by the current colgroup
 			* Create the relationships between the column header cell and the columns that a match can be found
-
 
 ## Existing Implementation
 

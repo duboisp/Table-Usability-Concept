@@ -5,10 +5,10 @@ thead - Table Parsing Algorithm
 
 ## Algorithm
 
-* No row should be processed at this point
-* Initiate an HTMLTableHeaderGroupElement interface.
-* Digest each row 
-* Stack the digested row _(used later)_
+No row should be processed at this point
+
+* [Digest each row](https://github.com/duboisp/Table-Usability-Concept/blob/master/row.md)
+* Stack the digested row for future use in the gobal algorithm
 
 ## Existing Implementation
 

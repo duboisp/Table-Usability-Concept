@@ -5,9 +5,9 @@ tbody - Table Parsing Algorithm
 
 ## Algorithm
 
-* Run the algorithm to initiate an row group.
-* Digest each row 
-* Run the algorithm for closing an row group
+* Run the [algorithm to initiate an row group](https://github.com/duboisp/Table-Usability-Concept/blob/master/rowGroupInitialize.md).
+* [Digest each row](https://github.com/duboisp/Table-Usability-Concept/blob/master/row.md)
+* Run the algorithm for [Finalizing a row group](https://github.com/duboisp/Table-Usability-Concept/blob/master/rowGroupFinalize.md)
 * Discard any cell that is spanned outside this row group
 
 ## Existing Implementation

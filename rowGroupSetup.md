@@ -28,7 +28,7 @@ Row Group Setup - Table Parsing Algorithm
 		* if the number of header group cell is equal for both row group: The level is the same as the previous group.
 		* if the number of header group cell is lower than the previous row group
 			* The current level is calculated based on the level of the previous row group minus the number of header group cell of the current row group
-			* Update the relationshipt of the header group cell than is also represented in the current row group
+			* Update the relationships of the header group cell than is also represented in the current row group
 			* The current level would be the same as the previous row group
 		* if the number of header group cell is greater than the previous row group
 			* Increase the current row group level by the number of header group cell more "1"
