@@ -41,7 +41,7 @@ The Table Usability Concept explained bellow use the grouping markup to provide 
 
 
 
-Note: The following is wrote in markdown github flavor. The following documentation, algorithm and API is the project content as today date on the github Table Usability Concept project (https://github.com/duboisp/Table-Usability-Concept)
+Note: The following is wrote in markdown. The following documentation, algorithm and API is the project content as today date on the github Table Usability Concept project (https://github.com/duboisp/Table-Usability-Concept)
 
 
 Table Usability API
