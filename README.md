@@ -74,35 +74,3 @@ The category is use to give a particular sementic to a classified element.
 * **Description Cell:** His relation is defined by the header group. Used to provide additional information for a cell header. The description category is not a data but help to understand the cell header and/or provide additional information about the Vector. For a row (Vector), the cell description is next to the cell header that his providing a description. For a column (Vector), the cell description is directly bellow the cell header in the next row. It's important that the cell description have the same width and height of his assoicated cell header.
 
 * **Layout Cell:** A layout cell don't provide any information. A layout cell need to be empty tag without any spaces inside. His location can only be at the intersection of the header group or at the insection of summary group. His width and height need to correspond to the group intersection. The layout cell can be a _th_ or a _td_ element.
-
-## Algorithm
-
-* While the current element is not one of the following elements, advance the current element to the next child of the table:
-	* _caption_
-	* _colgroup_
-	* _thead_
-	* _tbody_
-	* _tfoot_
-	* _tr_
-* If the _current element_ is a _caption_, run the [Long Description Extract algorithm](https://github.com/duboisp/Table-Usability-Concept/blob/master/LongDescriptionExtract.md)
-* While the current element is not one of the following elements, advance the current element to the next child of the table:
-	* _colgroup_
-	* _thead_
-	* _tbody_
-	* _tfoot_
-	* _tr_
-* If the _current element_ is a _colgroup_, run the [colgroup-col algorithm](https://github.com/duboisp/Table-Usability-Concept/blob/master/colgroup-col.md)
-* _Rows:_ While the current element is not one of the following elements, advance the current element to the next child of the table:
-	* _thead_
-	* _tbody_
-	* _tfoot_
-	* _tr_
-* If the _current element_ is a _thead_, run the [thead algorithm](https://github.com/duboisp/Table-Usability-Concept/blob/master/thead.md)
-* While the current element is not one of the following elements, advance the current element to the next child of the table:
-	* _tbody_
-	* _tfoot_
-	* _tr_
-* If the _current element_ is a _tbody_ or a _tfoot_, run the [tbody algorithm](https://github.com/duboisp/Table-Usability-Concept/blob/master/tbody.md)
-* If the current element is a tr, then run the [algorithm for processing rows](https://github.com/duboisp/Table-Usability-Concept/blob/master/row.md), advance the current element to the next child of the table, and return to the step labeled rows.
-* If there exists a row or column in the table containing only slots that do not have a cell anchored to them, then this is a table model error.
-* Return the table.
