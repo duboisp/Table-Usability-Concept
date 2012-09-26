@@ -1,7 +1,7 @@
 Table-Usability-Concept
 =======================
 
-HTML Table Shemas and Technical documentation supported by the [wet-boew table parser](https://github.com/wet-boew/wet-boew/blob/master/src/js/workers/parser.table.js)
+HTML Table Shemas and Technical documentation supported by the [wet-boew table parser](https://github.com/wet-boew/wet-boew/blob/master/src/js/workers/parser.table.js) variant.
 
 The Table Usability define a concept on how to create the relationship between the informative elements versus the tables structure elements. That is accomplished with guidance of the [Table Processing model](http://dev.w3.org/html5/spec/attributes-common-to-td-and-th-elements.html#processing-model-0) defined in the HTML 5 specification and the WCAG 2.0 Technique [G57: Ordering the content in a meaningful sequence](http://www.w3.org/TR/2010/NOTE-WCAG20-TECHS-20101014/G57). The Table Usability Concept is supported by a Javascript Parser build with the jQuery framework and integrated in the [Web Experience Toolkit Project](https://github.com/wet-boew/wet-boew).
 

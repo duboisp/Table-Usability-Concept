@@ -26,10 +26,10 @@ _[The th element](http://dev.w3.org/html5/spec/the-th-element.html)_
 		attribute long height;
 		attribute long width;
 		readonly attribute DOMString scope;
-		readonly attribute DOMString context; 
 	};
 	
 	interface HTMLTableHeaderCellElement : HTMLTableCellElement {
+		readonly attribute DOMString context; 
 		attribute HTMLTableCellElement description;
 		attribute HTMLTableCellElement key;
 	}
