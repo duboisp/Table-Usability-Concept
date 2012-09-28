@@ -30,7 +30,7 @@ The header colgroup and summary colgroup relationships would be defined just dur
 
 ## Existing Implementation
 
-[Colgroup Parser](https://github.com/wet-boew/wet-boew/blob/master/src/js/workers/parser.table.js#L178)
+[Colgroup Parser](https://github.com/duboisp/Table-Usability-Concept/blob/master/Polyfill/parser.table.js#L178)
 
 -----
 _HTML5 specification refer to the Editor's Draft dated of September 21 2012, $Revision 1.1998 $_

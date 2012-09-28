@@ -5,14 +5,14 @@ tbody - Table Parsing Algorithm
 
 ## Algorithm
 
-* Run the [algorithm to initiate an row group](https://github.com/duboisp/Table-Usability-Concept/blob/master/rowGroupInitialize.md).
-* [Digest each row](https://github.com/duboisp/Table-Usability-Concept/blob/master/row.md)
-* Run the algorithm for [Finalizing a row group](https://github.com/duboisp/Table-Usability-Concept/blob/master/rowGroupFinalize.md)
+* Run the [algorithm to initiate an row group](https://github.com/duboisp/Table-Usability-Concept/blob/master/Algorithm/rowGroupInitialize.md).
+* [Digest each row](https://github.com/duboisp/Table-Usability-Concept/blob/master/Algorithm//row.md)
+* Run the algorithm for [Finalizing a row group](https://github.com/duboisp/Table-Usability-Concept/blob/master/Algorithm//rowGroupFinalize.md)
 * Discard any cell that is spanned outside this row group
 
 ## Existing Implementation
 
-[tbody Parser](https://github.com/wet-boew/wet-boew/blob/master/src/js/workers/parser.table.js#L1709)
+[tbody Parser](https://github.com/duboisp/Table-Usability-Concept/blob/master/Polyfill/parser.table.js#L1709)
 
 -----
 _HTML5 specification refer to the Editor's Draft dated of September 21 2012, $Revision 1.1998 $_

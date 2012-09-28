@@ -43,4 +43,4 @@ The following algorithm are not considerating any row included in the row group 
 
 ## Existing Implementation
 
-[row Parser](https://github.com/wet-boew/wet-boew/blob/master/src/js/workers/parser.table.js#L261)
+[row Parser](https://github.com/duboisp/Table-Usability-Concept/blob/master/Polyfill/parser.table.js#L261)
