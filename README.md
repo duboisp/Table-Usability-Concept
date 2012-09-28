@@ -9,6 +9,8 @@ The [HTML Table Validator](http://wet-boew.github.com/wet-boew/demos/tableparser
 
 Javascript Table Parser source code: [Original location in the WET Toolbox](https://github.com/wet-boew/wet-boew/blob/master/src/js/workers/parser.table.js), [Copy in this repository](https://github.com/duboisp/Table-Usability-Concept/blob/master/Polyfill/parser.table.js)
 
+[whatwg - Proposal: new Table Parser Algorithm - new Table API - removal of the headers attribute - removal of the scope attribute](http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2012-September/037475.html)
+
 ##Element Type
 
 * **Informative:** The informative element is related to the visual look of the table. In the HTML the table informative element are: _caption, th, td_
