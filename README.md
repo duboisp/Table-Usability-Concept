@@ -7,7 +7,7 @@ There is an existing implementation variant of this Table Usability Concept. You
 
 The [HTML Table Validator](http://wet-boew.github.com/wet-boew/demos/tableparser/validator-htmltable.html) show how this table usability concept are interpretating the relationships between cells and the markup used.
 
-Javascript Table Parser source code: Original location in the WET Toolbox](https://github.com/wet-boew/wet-boew/blob/master/src/js/workers/parser.table.js), [Copy in this repository](https://github.com/duboisp/Table-Usability-Concept/blob/master/Polyfill/parser.table.js)
+Javascript Table Parser source code: [Original location in the WET Toolbox](https://github.com/wet-boew/wet-boew/blob/master/src/js/workers/parser.table.js), [Copy in this repository](https://github.com/duboisp/Table-Usability-Concept/blob/master/Polyfill/parser.table.js)
 
 ##Element Type
 
