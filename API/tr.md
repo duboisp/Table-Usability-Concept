@@ -26,6 +26,29 @@ _[The tr element](http://dev.w3.org/html5/spec/the-tr-element.html)_
 	};
 	
 	HTMLTableVectorElement, defined in the col elements.
+
+## Table Parser - WET 3.0 release
+
+	jQuery.data tblparser  {
+		array cell;
+		array datacell;
+		array desccell;
+		jQuery elem;
+		groupZero {
+			// Reference to the structure attached to the table element
+		};
+		array header;
+		array headerset;
+		array keycell;
+		long lastHeadingColPos;
+		long level;
+		rowgroup {
+			// Reference to the structure attached to the associated tbody, tfoot element 
+		}
+		long rowpos;
+		long type;
+		long uid;
+	}
 	
 -----
 _HTML5 specification refer to the Editor's Draft dated of September 21 2012, $Revision 1.1998 $_

@@ -40,10 +40,61 @@ _[The table element](http://dev.w3.org/html5/spec/the-table-element.html#the-tab
 		readonly attribute HTMLCollection rows;
 		readonly attribute HTMLCollection cols;
 
-
-
 	};
 
+## Table Parser - WET 3.0 release
+
+	jQuery.data tblparser  {
+		array allParserObj;
+		array col;
+		colcaption {
+			array dataset;
+			jQuery elem;
+			array summaryset;
+			long type;
+			long uid;
+		}
+		array colgroup;
+		colgrouphead {
+			// Reference to the header colgroup
+		}
+		array colgrouplevel  [
+			Level => [
+				// Reference to the colgroup at specified level
+			]
+		];
+		array desccell;
+		jQuery elem;
+		groupheadercell {
+			jQuery caption;
+			colcaption {
+				// Reference
+			};
+			jQuery description;
+			jQuery elem;
+			groupZero {
+				// Reference to the structure attached to the table element
+			};
+			rowcaption {
+				// Reference
+			}
+			long type;
+		}
+		array keycell;
+		array lstrowgroup;
+		array row;
+		rowcaption {
+			array dataset;
+			jQuery elem;
+			array summaryset;
+			long type;
+			long uid;
+		}
+		array rowgroup;
+		array theadRowStack;
+		long uid;
+		array virtualColgroup;
+	}
 
 -----
 _HTML5 specification refer to the Editor's Draft dated of September 21 2012, $Revision 1.1998 $_

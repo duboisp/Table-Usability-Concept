@@ -23,5 +23,23 @@ _[The colgroup element](http://dev.w3.org/html5/spec/the-colgroup-element.html)_
 		readonly attribute long end;
 	}
 
+## Table Parser - WET 3.0 release
+
+	jQuery.data tblparser  {
+		array col;
+		jQuery elem;
+		long end;
+		groupZero {
+			// Reference to the structure attached to the table element
+		};
+		array header;
+		long level;
+		array parentHeader;
+		string parentHeader;
+		long start;
+		long type;
+		long uid;
+	}
+
 -----
 _HTML5 specification refer to the Editor's Draft dated of September 21 2012, $Revision 1.1998 $_
