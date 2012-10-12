@@ -14,6 +14,17 @@ _[The caption element](http://dev.w3.org/html5/spec/the-caption-element.html)_
 		readonly attribute HTMLCollection descriptions;
 	};
 
+### Parameters
+
+* **header**: The table caption
+* **descriptions**: Elements that define the table description
+
+### Idea behind
+
+To be able to take off the description and move it inside a resulting container created from a data table.
+
+For example, a dynamicly generated chart in a figure element. The table description is moved in the figcaption element.
+
 ## Table Parser - WET 3.0 release
 
 	jQuery.data tblparser  {
