@@ -24,6 +24,10 @@ _[The col element](http://dev.w3.org/html5/spec/the-col-element.html)_
 		readonly attribute long end;
 	}
 
+### Idea behind
+
+Provide the same segmentic of a `tr` element but in the colum scope.
+
 ## Table Parser - WET 3.0 release
 
 	jQuery.data tblparser  {
