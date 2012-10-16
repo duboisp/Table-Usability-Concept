@@ -15,9 +15,8 @@
 		fn : {}
 	};
 	_pe.fn.parsertable = {
-		type : 'plugin',
 		onParserError: undefined,
-		_exec : function (elm) {
+		parse : function (elm) {
 			var obj = elm,
 			// Event handler for issue error found durring the table parsing process
 				errorTrigger = function (numerr, obj) {
@@ -53,7 +52,8 @@
 				rowgroupheadercalled = false,
 				hasTfoot = $(obj).has('tfoot'),
 				lastHeadingSummaryColPos,
-				previousDataHeadingColPos;
+				previousDataHeadingColPos,
+				tfootOnProcess = false;
 			// elm need to be a table
 			if ($(elm).get(0).nodeName.toLowerCase() !== 'table') {
 				errorTrigger(1, elm);
@@ -581,6 +581,10 @@
 						// Get the colgroup level
 						for (i = 0, _ilen = tmpStack.length; i < _ilen; i += 1) {
 							tmpStackCell = tmpStack[i].cell[curColgroupFrame.end - 1];
+							if (!tmpStackCell && curColgroupFrame.end > tmpStack[i].cell.length) {
+								errorTrigger(7); // Number of column are not corresponding to the table width
+								break;
+							}
 							if ((tmpStackCell.colpos + tmpStackCell.width - 1) === curColgroupFrame.end && (tmpStackCell.colpos >= curColgroupFrame.start)) {
 								if (!groupLevel || groupLevel > (i + 1)) {
 									groupLevel = (i + 1); // would equal at the current data cell level. The lowest row level win
@@ -824,11 +828,17 @@
 			}
 
 			function rowgroupSetup(forceDataGroup) {
-				// console.log('Row Group Setup');
+
 				var i,
 					previousRowGroup,
 					tmpHeaderLevel;
 
+				if (tfootOnProcess) {
+					currentRowGroup.type = 3;
+					currentRowGroup.level = 0;
+					rowgroupHeaderRowStack = [];
+					return;
+				}
 				// Check if the current row group, already have some row, if yes this is a new row group
 				if (rowgroupHeaderRowStack.length > 0) {
 					// if more than 0 cell in the stack, mark this row group as a data row group and create the new row group (can be only virtual)
@@ -1426,7 +1436,7 @@
 										if (rowheader.height === row.cell[i].height) {
 											errorTrigger(23);
 										}
-									
+
 										// The current cell are a child of the previous rowheader 
 										if (!rowheader.subheader) {
 											rowheader.subheader = [];
@@ -1674,15 +1684,14 @@
 				$('tfoot', obj).appendTo($('tbody:last', obj).parent());
 			}
 			$(obj).children().each(function () {
-				var $this = $(this);
-				switch (this.nodeName.toLowerCase()) {
-				case 'caption':
+				var $this = $(this),
+					nodeName = this.nodeName.toLowerCase();
+
+				if (nodeName === 'caption') {
 					processCaption(this);
-					break;
-				case 'colgroup':
+				} else if (nodeName === 'colgroup') {
 					processColgroup(this);
-					break;
-				case 'thead':
+				} else if (nodeName === 'thead') {
 					currentRowGroupElement = this;
 					// The table should not have any row at this point
 					if (theadRowStack.length !== 0 || (groupZero.row && groupZero.row.length > 0)) {
@@ -1704,10 +1713,11 @@
 					stackRowHeader = false;
 
 					// Here it's not possible to  Diggest the thead and the colgroup because we need the first data row to be half processed before
-					break;
-				case 'tbody':
-				case 'tfoot':
-
+				} else if (nodeName === 'tbody' || nodeName === 'tfoot') {
+					
+					if (nodeName === 'tfoot') {
+						tfootOnProcess = true;
+					}
 					// Currently there are no specific support for tfoot element, the tfoot is understood as a normal tbody
 
 					currentRowGroupElement = this;
@@ -1737,7 +1747,7 @@
 					});
 
 					finalizeRowGroup();
-					
+
 					// Check for residual rowspan, there can not have cell that overflow on two or more rowgroup
 					$.each(spannedRow, function () {
 						if (this.spanHeight > 0) {
@@ -1751,22 +1761,12 @@
 					currentRowHeader = [];
 
 					currentTbodyID += 1;
-					break;
-					// case 'tfoot':
-					//currentRowGroupElement = this;
-
-					// The rowpos are not incremented here because this is a summary rowgroup for the GroupZero
-
-					// Question: Stack any row and processed them at the really end ? Do we allow tfoot to be used as a footnote for the tabular data ?
-					// break;
-				case 'tr':
+				} else if (nodeName === 'tr') {
 					// This are suppose to be a simple table
 					processRow(this);
-					break;
-				default:
+				} else {
 					// There is a DOM Structure error
 					errorTrigger(30, this);
-					break;
 				}
 			});
 
