@@ -22,6 +22,10 @@ Row Group Setup - Table Parsing Algorithm
 * Check agains the column group if an header column group exist
 	* If exist: Check if the row group can be marked as a summary row group. The header row array should be empty before the execution of this algorithm
 	* Otherwise: mark the row group as a data row group
+* Check if the current row is a summary group and if the table is not in "hassum" mode
+	* Mark the current group as a data group
+	* Use the same data level as the preceding row group
+	* exit
 * Calculate the data level if not set
 	The data level is based on the current and previous row group.
 	* if the current row group is marked as a data row group
