@@ -30,6 +30,7 @@ _[The table element](http://dev.w3.org/html5/spec/the-table-element.html#the-tab
 
 				attribute HTMLTableGroupElement? rowHeaderGroups;
 				attribute HTMLTableGroupElement? colHeaderGoups;
+				attribute boolean hassum;
 
 		readonly attribute HTMLCollection rowGroups;
 		readonly attribute HTMLCollection colGroups;
