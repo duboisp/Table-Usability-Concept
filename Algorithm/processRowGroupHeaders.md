@@ -29,15 +29,14 @@ The following algorithm are not considerating any row included in the row group 
 		* Create virtual colgroup for the group cell header that is on lower data level of the current colgroup data level
 			This identify the group header cell for the column grouping
 		* Set the relationships between the group header cell for the current group and the virtual column group
-		* If the number of virtual column group is lower than the current colgroup level
+		* If the table is in "hassum" mode Or the number of virtual column group is lower than the current colgroup level
 			* Let the current colgroup to be a data column group
-		* If the table is in "hassum" mode
-			* If the preceding colgroup are in the same data level or the current colgroup level is higher to the preceding colgroup
-				* Let the current colgroup to be a summary column group
-			* Else If the current colgroup level is 1 and it's exist other colgroup at level 1
-				* Let the current colgroup to be a summary column group
-				* If there exist summary colgroup at level 1
-					* Let current colgroup to be at level 0
+		* Else If the preceding colgroup are in the same data level or the current colgroup level is higher to the preceding colgroup
+			* Let the current colgroup to be a summary column group
+		* Else If the current colgroup level is 1 and it's exist other colgroup at level 1
+			* Let the current colgroup to be a summary column group
+			* If there exist summary colgroup at level 1
+				* Let current colgroup to be at level 0
 		* For each col defined in the current colgroup
 			* Assign the type and the level defined by the current colgroup
 			* Create the relationships between the column header cell and the columns that a match can be found
