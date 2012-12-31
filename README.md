@@ -23,6 +23,7 @@ Related discussion (W3C and WHATWG)
 * http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2012-November/037862.html
 * http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2012-December/038351.html
 * http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2012-December/038465.html
+* http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2012-December/038486.html
 
 
 ##Element Type
