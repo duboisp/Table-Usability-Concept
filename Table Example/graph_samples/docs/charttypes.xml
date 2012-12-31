@@ -1,0 +1,73 @@
+﻿<?xml version="1.0"?>
+<xlChartTypes>
+  <xlChartType name="xlXYScatterSmoothNoMarkers" value="73" eng="Smooth No Markers Scatter Chart" fra="diagramme de dispersion lisse sans marqueurs" legal="1" />
+  <xlChartType name="xlXYScatterSmooth" value="72" eng="Smooth Scatter Chart" fra="diagramme de dispersion lisse" legal="1" />
+  <xlChartType name="xlXYScatterLinesNoMarkers" value="75" eng="Scatter Lines No Markers Chart" fra="graphique linéaire de dispersion sans marqueurs" legal="1" />
+  <xlChartType name="xlXYScatterLines" value="74" eng="Scatter Lines Chart" fra="graphique linéaire de dispersion" legal="1" />
+  <xlChartType name="xlXYScatter" value="-4169" eng="Scatter Chart" fra="diagramme de dispersion" legal="1" />
+  <xlChartType name="xlPie" value="5" eng="Pie Chart" fra="diagramme à secteurs" legal="1" />
+  <xlChartType name="xlLine" value="4" eng="Line Chart" fra="graphique linéaire simple" legal="1" />
+  <xlChartType name="xlColumnStacked100" value="53" eng="100% Column Stacked Chart" fra="graphique à colonnes empilées à 100%" legal="1" />
+  <xlChartType name="xlColumnStacked" value="52" eng="Column Stacked Chart" fra="graphique à colonnes empilées" legal="1" />
+  <xlChartType name="xlColumnClustered" value="51" eng="Column Clustered Chart" fra="graphique à colonnes groupées" legal="1" />
+  <xlChartType name="xlBarStacked100" value="59" eng="100% Stacked Bar Chart" fra="graphe à barres empilées à 100%" legal="1" />
+  <xlChartType name="xlBarStacked" value="58" eng="Stacked Bar Chart" fra="graphe à barres empilées" legal="1" />
+  <xlChartType name="xlBarClustered" value="57" eng="Bar Clustered Chart" fra="histogramme à barres groupées" legal="1" />
+  <xlChartType name="xlSurfaceWireframe" value="84" eng="Surface Wireframe Chart" fra="diagramme à surface en fil de fer" legal="0" />
+  <xlChartType name="xlSurfaceTopViewWireframe" value="86" eng="Surface Top view Wireframe Chart" fra="diagramme à surface en fil de fer vue de haut" legal="0" />
+  <xlChartType name="xlSurfaceTopView" value="85" eng="Surface Top View Chart" fra="diagramme à surface vue de haut" legal="0" />
+  <xlChartType name="xlSurface" value="83" eng="Surface Chart" fra="diagramme à surface" legal="0" />
+  <xlChartType name="xlStockVOHLC" value="91" eng="Stock Volume-Open-High-Low-Close Chart" fra="diagramme de bourse en volume ouverture-maximum-minimum-fermeture" legal="0" />
+  <xlChartType name="xlStockVHLC" value="90" eng="Stock Volume-High-Low-Close Chart" fra="diagramme de bourse en volume maximum-minimum-fermeture" legal="0" />
+  <xlChartType name="xlStockOHLC" value="89" eng="Stock Open-High-Low-Close Chart" fra="diagramme de bourse ouverture-maximum-minimum-fermeture" legal="0" />
+  <xlChartType name="xlStockHLC" value="88" eng="Stock High-Low-Close Chart" fra="diagramme de bourse maximum-minimum-fermeture" legal="0" />
+  <xlChartType name="xlRadarMarkers" value="81" eng="Radar Markers Chart" fra="diagramme de Kiviat rempli avec marqueur" legal="0" />
+  <xlChartType name="xlRadarFilled" value="82" eng="Radar Filled Chart" fra="diagramme de Kiviat rempli" legal="0" />
+  <xlChartType name="xlRadar" value="-4151" eng="Radar Chart" fra="diagramme de Kiviat" legal="0" />
+  <xlChartType name="xlPyramidColStacked100" value="108" eng="100% Pyramid Column Stacked Chart" fra="graphique à colonnes empilées à 100% en forme pyramidale" legal="0" />
+  <xlChartType name="xlPyramidColStacked" value="107" eng="Pyramid Column Stacked Chart" fra="graphique à colonnes empilées en forme pyramidale" legal="0" />
+  <xlChartType name="xlPyramidColClustered" value="106" eng="Pyramid Column Clustered Chart" fra="graphique à colonnes groupées en forme pyramidale" legal="0" />
+  <xlChartType name="xlPyramidCol" value="112" eng="Pyramid Column Chart" fra="graphique à colonnes en forme pyramidale" legal="0" />
+  <xlChartType name="xlPyramidBarStacked100" value="111" eng="100% Pyramid Stacked Bar Chart" fra="histogramme à barres empilées à 100% en forme pyramidale" legal="0" />
+  <xlChartType name="xlPyramidBarStacked" value="110" eng="Pyramid Stacked Bar Chart" fra="histogramme à barres empilées en forme pyramidale" legal="0" />
+  <xlChartType name="xlPyramidBarClustered" value="109" eng="Pyramid Clustered Bar Chart" fra="histogramme à barres groupées en forme pyramidale" legal="0" />
+  <xlChartType name="xlPieOfPie" value="68" eng="Pie of Pie Chart" fra="diagramme à secteurs d'un diagramme à secteur" legal="0" />
+  <xlChartType name="xlPieExploded" value="69" eng="Exploded Pie Chart" fra="diagramme à secteurs éclaté" legal="0" />
+  <xlChartType name="xlLineStacked100" value="64" eng="100% Line Stacked Chart" fra="graphique linéaire simple empilé à 100% avec marqueurs" legal="0" />
+  <xlChartType name="xlLineStacked" value="63" eng="Line Stacked Chart" fra="graphique linéaire simple empilé" legal="0" />
+  <xlChartType name="xlLineMarkersStacked100" value="67" eng="100% Line Markers Stacked Chart" fra="graphique linéaire simple empilé à 100% avec marqueurs" legal="0" />
+  <xlChartType name="xlLineMarkersStacked" value="66" eng="Line Markers Stacked Chart" fra="graphique linéaire simple empilé avec marqueurs" legal="0" />
+  <xlChartType name="xlLineMarkers" value="65" eng="Line Markers Chart" fra="graphique linéaire simple avec marqueurs" legal="0" />
+  <xlChartType name="xlDoughnutExploded" value="80" eng="Exploded Doughnut Chart" fra="graphique en forme de beigne éclaté" legal="0" />
+  <xlChartType name="xlDoughnut" value="-4120" eng="Doughnut Chart" fra="graphique en forme de beigne" legal="0" />
+  <xlChartType name="xlCylinderColStacked100" value="94" eng="100% Cylinder Column Stacked Chart" fra="graphique à colonnes empilées à 100% en forme cylindrique" legal="0" />
+  <xlChartType name="xlCylinderColStacked" value="93" eng="Cylinder Column Stacked Chart" fra="graphique à colonnes empilées en forme cylindrique" legal="0" />
+  <xlChartType name="xlCylinderColClustered" value="92" eng="Cylinder Column Clustered Chart" fra="graphique à colonnes groupées en forme cylindrique" legal="0" />
+  <xlChartType name="xlCylinderCol" value="98" eng="Cylyinder Column Chart" fra="graphique à colonnes en forme cylindrique" legal="0" />
+  <xlChartType name="xlConeColStacked100" value="97" eng="100% Cone Column Stacked Chart" fra="graphique à colonnes empilées à 100% en forme conique" legal="0" />
+  <xlChartType name="xlConeColStacked" value="96" eng="Cone Column Stacked Chart" fra="graphique à colonnes empilées en forme conique" legal="0" />
+  <xlChartType name="xlConeColClustered" value="95" eng="Cone Column Clustered Chart" fra="graphique à colonnes groupées en forme conique" legal="0" />
+  <xlChartType name="xlConeCol" value="105" eng="Cone Column Chart" fra="graphique à colonnes en forme conique" legal="0" />
+  <xlChartType name="xlConeBarStacked100" value="104" eng="100% Cone Bar Stacked Chart" fra="histogramme à barres coniques empilées à 100%" legal="0" />
+  <xlChartType name="xlConeBarStacked" value="103" eng="Cone Bar Stacked Chart" fra="histogramme à barres coniques empilées" legal="0" />
+  <xlChartType name="xlConeBarClustered" value="102" eng="Cone Bar Clustered Chart" fra="histogramme à barres coniques groupées" legal="0" />
+  <xlChartType name="xlBubble3DEffect" value="87" eng="Bubble 3D Effect Chart" fra="diagramme à bulles avec effet 3D" legal="0" />
+  <xlChartType name="xlBubble" value="15" eng="Bubble Chart" fra="diagramme à bulles" legal="0" />
+  <xlChartType name="xlBarOfPie" value="71" eng="Bar of Pie Chart" fra="histogramme sectoriel" legal="0" />
+  <xlChartType name="xlAreaStacked100" value="77" eng="100% Area Stacked Chart" fra="graphique en aires empilées à 100%" legal="0" />
+  <xlChartType name="xlAreaStacked" value="76" eng="Stack Area Chart" fra="graphique en aires empilées" legal="0" />
+  <xlChartType name="xlArea" value="1" eng="Area Chart" fra="graphique en aires" legal="0" />
+  <xlChartType name="xl3DPieExploded" value="70" eng="3D Exploded Pie Chart" fra="graphe sectoriel éclaté en 3D" legal="0" />
+  <xlChartType name="xl3DPie" value="-4102" eng="3D Pie Chart" fra="diagramme à secteurs en 3D" legal="0" />
+  <xlChartType name="xl3DLine" value="-4101" eng="3D Line Chart" fra="graphique linéaire simple en 3D" legal="0" />
+  <xlChartType name="xl3DColumnStacked100" value="56" eng="100% 3D Column Stacked Chart" fra="graphique en 3D à colonnes empilées à 100%" legal="0" />
+  <xlChartType name="xl3DColumnStacked" value="55" eng="3D Column Stacked Chart" fra="graphique en 3D à colonnes empilées" legal="0" />
+  <xlChartType name="xl3DColumnClustered" value="54" eng="3D Clustered Column Chart" fra="graphique en 3D à colonnes groupées" legal="0" />
+  <xlChartType name="xl3DColumn" value="-4100" eng="3D Column Chart" fra="graphique en 3D à colonnes" legal="0" />
+  <xlChartType name="xl3DBarStacked100" value="62" eng="100% 3D Stacked Bar Chart" fra="graphique en 3D à barres groupées à 100%" legal="0" />
+  <xlChartType name="xl3DBarStacked" value="61" eng="3D Stacked Bar Chart" fra="graphique en 3D à barres empilées à 100%" legal="0" />
+  <xlChartType name="xl3DBarClustered" value="60" eng="3D Clustered Bar Chart" fra="graphique en 3D à barres groupées" legal="0" />
+  <xlChartType name="xl3DAreaStacked100" value="79" eng="100% 3D Area Stacked Chart" fra="graphique en aires empilées à 100% en 3D" legal="0" />
+  <xlChartType name="xl3DAreaStacked" value="78" eng="3D Area Stacked Chart" fra="graphique en aires empilées en 3D" legal="0" />
+  <xlChartType name="xl3DArea" value="-4098" eng="3D Area Chart" fra="graphique en aires en 3D" legal="0" />
+</xlChartTypes>

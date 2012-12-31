@@ -7,9 +7,23 @@ There is an existing implementation variant of this Table Usability Concept. You
 
 The [HTML Table Validator](http://wet-boew.github.com/wet-boew/demos/tableparser/validator-htmltable.html) show how this table usability concept are interpretating the relationships between cells and the markup used.
 
-Javascript Table Parser source code: [Original location in the WET Toolbox](https://github.com/wet-boew/wet-boew/blob/master/src/js/dependencies/parserTable.js), [Copy in this repository](https://github.com/duboisp/Table-Usability-Concept/blob/master/Polyfill/parser.table.js)
+##Ressource and other informations
 
-[whatwg - Proposal: new Table Parser Algorithm - new Table API - removal of the headers attribute - removal of the scope attribute](http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2012-September/037475.html)
+Javascript Table Parser source code: [Copy in this repository](https://github.com/duboisp/Table-Usability-Concept/blob/master/Polyfill/parser.table.js), [Original location in the WxT Toolbox](https://github.com/wet-boew/wet-boew/blob/master/src/js/dependencies/parserTable.js)
+
+Related discussion (W3C and WHATWG)
+* https://www.w3.org/Bugs/Public/show_bug.cgi?id=17943
+* https://www.w3.org/Bugs/Public/show_bug.cgi?id=18791
+* https://www.w3.org/Bugs/Public/show_bug.cgi?id=18790
+* http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2012-September/037185.html
+* http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2012-September/037475.html
+* http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2012-October/037484.html
+* http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2012-October/037679.html
+* http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2012-November/037797.html
+* http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2012-November/037862.html
+* http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2012-December/038351.html
+* http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2012-December/038465.html
+
 
 ##Element Type
 
