@@ -1,0 +1,68 @@
+=Table Parser for WET 3.0=
+
+<p align="right">''[[Analyseur syntaxique de tableaux pour la BOEW 3.0 | français]]''</p>
+
+==Overview==
+'''Project Lead: '''Pierre Dubois ([https://github.com/duboisp @duboisp]) - ''Industry Canada, Canadian Intellectual Property Office''
+
+===Purpose===
+Create a plugin that use a table
+
+==Developing for WET with the table parser==
+
+===How to parse the table===
+
+# Load the dependency "parserTable"
+# call the parser with your jQuery table element
+<code>
+if (!$(elem).data().tblparser) {
+    _pe.fn.parsertable.parse($(elem));
+}
+</code>
+
+===How to Access to the parsed data===
+
+That is simple, once the table are fully parsed, each tabular element get a new jQuery.Data attribute called "tblparser". You can access it like this
+
+<code>
+tblparser = $(elem).data().tblparser;
+</code>
+
+the "tblparser" object would depend of the "elem". You can use the API Interface to know the relationship and get the attribute available.
+
+If you want, you can access it directly from the Firebox console, something like this
+
+<code>
+console.log($('table:eq(0)').data().tblparser);
+</code>
+
+===API Interface===
+
+On my Table Usability Concept github project you will find the full API listed here https://github.com/duboisp/Table-Usability-Concept/tree/master/API
+You will need to use the API under "Table Parser - WET 3.0 release" header.
+
+If you have any question regarding the API or about the Table Usability Concept, don't hesitate to submit an issue (https://github.com/duboisp/Table-Usability-Concept/issues/new)
+
+
+===Example of use===
+
+If you are looking about how to get access to the parsed tabular data take a look at
+
+HTML Table Validator
+* From Line 377 - https://github.com/wet-boew/wet-boew/blob/master/demos/tableparser/validator-htmltable.html#L377
+* To Line 686 - https://github.com/wet-boew/wet-boew/blob/master/demos/tableparser/validator-htmltable.html#L686
+
+Zebra Stripping
+* From Line 31 - https://github.com/wet-boew/wet-boew/blob/master/src/js/workers/zebra.js#L31
+* To Line 190 - https://github.com/wet-boew/wet-boew/blob/master/src/js/workers/zebra.js#L190
+
+Chart and Graph
+* From Line 2384 - https://github.com/wet-boew/wet-boew/blob/master/src/js/dependencies/charts.js#L2384
+* To Line 2424 - https://github.com/wet-boew/wet-boew/blob/master/src/js/dependencies/charts.js#L2424
+
+===HTML Table Validator TODO List===
+
+* Add implicit ids/headers relationship instead of exclusively doing explicit
+* Warn the user of the presence of a possible complex table when a data cell or a summary cell span in multiple columns or multiple rows. That is not usual for simple table.
+* Add an option for tolerance for data cell colspan > 1 or rowspan > 1 in regard of determining if they are simple or complex tables.
+* Do some research about implementing a javascript XML parser that would re-format the HTML output instead of using the SGML browser parser.
