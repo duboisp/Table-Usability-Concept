@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>Finding column header group - Table parser</title>
+
+</head>
+<body>
+
+<h1>Finding column header group <small>Table parser</small></h1>
+
+
+
+
+<table id="tbl-1">
+	<tr>
+		<th>Header</th>
+		<th>Header</th>
+		<th>Header</th>
+		<th>Header</th>
+	</tr>
+	<tr>
+		<td>Data</td>
+		<td>Data</td>
+		<td>Data</td>
+		<td>Data</td>
+	</tr>
+	<tr>
+		<td>Data</td>
+		<td>Data</td>
+		<td>Data</td>
+		<td>Data</td>
+	</tr>
+	<tr>
+		<td>Data</td>
+		<td>Data</td>
+		<td>Data</td>
+		<td>Data</td>
+	</tr>
+</table>
+
+
+<table id="tbl-2">
+	<thead>
+		<tr>
+			<th>Header</th>
+			<th>Header</th>
+			<th>Header</th>
+			<th>Header</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Data</td>
+			<td>Data</td>
+			<td>Data</td>
+			<td>Data</td>
+		</tr>
+		<tr>
+			<td>Data</td>
+			<td>Data</td>
+			<td>Data</td>
+			<td>Data</td>
+		</tr>
+		<tr>
+			<td>Data</td>
+			<td>Data</td>
+			<td>Data</td>
+			<td>Data</td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+<table id="tbl-3">
+	<thead>
+		<tr>
+			<th>Header</th>
+			<th>Header</th>
+			<th>Header</th>
+			<th>Header</th>
+		</tr>
+		<tr>
+			<td>Data</td>
+			<td>Data</td>
+			<td>Data</td>
+			<td>Data</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Data</td>
+			<td>Data</td>
+			<td>Data</td>
+			<td>Data</td>
+		</tr>
+		<tr>
+			<td>Data</td>
+			<td>Data</td>
+			<td>Data</td>
+			<td>Data</td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+
+<table id="tbl-4">
+	<thead>
+		<tr>
+			<th>Header</th>
+			<th>Header</th>
+			<th>Header</th>
+			<th>Header</th>
+		</tr>
+		<tr>
+			<td>Data</td>
+			<td>Data</td>
+			<td>Data</td>
+			<td>Data</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>Header</th>
+			<td>Data</td>
+			<td>Data</td>
+			<td>Data</td>
+		</tr>
+		<tr>
+			<th>Header</th>
+			<td>Data</td>
+			<td>Data</td>
+			<td>Data</td>
+		</tr>
+	</tbody>
+</table>
+
+<table id="tbl-5">
+	<thead>
+		<tr>
+			<th>Header</th>
+			<th>Header</th>
+			<th>Header</th>
+			<th>Header</th>
+		</tr>
+		<tr>
+			<td>Data</td>
+			<td>Data</td>
+			<td>Data</td>
+			<td>Data</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Data</td>
+			<th>Header</th>
+			<td>Data</td>
+			<td>Data</td>
+		</tr>
+		<tr>
+			<td>Data</td>
+			<th>Header</th>
+			<td>Data</td>
+			<td>Data</td>
+		</tr>
+	</tbody>
+</table>
+
+
+<table id="tbl-6">
+	<thead>
+		<tr>
+			<th>Header</th>
+			<th>Header</th>
+			<th>Header</th>
+			<th>Header</th>
+		</tr>
+		<tr>
+			<td>Data</td>
+			<td>Data</td>
+			<td>Data</td>
+			<td>Data</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Data</td>
+			<th>Header</th>
+			<th>Header</th>
+			<td>Data</td>
+		</tr>
+		<tr>
+			<td>Data</td>
+			<th>Header</th>
+			<th>Header</th>
+			<td>Data</td>
+		</tr>
+	</tbody>
+</table>
+
+
+<table id="tbl-7">
+	<thead>
+		<tr>
+			<th>Header</th>
+			<th>Header</th>
+			<th>Header</th>
+			<th>Header</th>
+		</tr>
+		<tr>
+			<td>Data</td>
+			<td>Data</td>
+			<td>Data</td>
+			<td>Data</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Data</td>
+			<th colspan="2">Header</th>
+			<td>Data</td>
+		</tr>
+		<tr>
+			<td>Data</td>
+			<th>Header</th>
+			<th>Header</th>
+			<td>Data</td>
+		</tr>
+	</tbody>
+</table>
+
+
+<!--
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+-->
+
+<script>
+
+// Do this algorithm if the table has more than two tbody OR one tbody + one tfoot OR more than one colgroup element.
+
+	function findColHeaderGroup( tblID ) {
+		var table = document.getElementById( tblID ),
+			i, j,
+			firstDataCellRowIndex,
+			colHeaderIndexStart,
+			colHeaderIndexEnd;
+			
+		console.log( table );
+		
+		// Find the first data cell
+		for( i = 0; i !== table.rows.length; i += 1 ) {
+			
+			var cells = table.rows[ i ].cells,
+				cells_len = cells.length;
+				
+			if ( cells[ cells_len - 1 ].nodeName === "TD" && table.rows[ i ].parentNode.nodeName === "TBODY" ) {
+				firstDataCellRowIndex = i;
+				
+				var slotWidth = 1;
+				for( j = 0; j !== cells_len; j += 1 ) {
+					
+					if ( !colHeaderIndexStart && cells[ j ].nodeName === "TH" ) {
+						colHeaderIndexStart = slotWidth;
+					}
+					
+					if ( colHeaderIndexStart && cells[ j ].nodeName === "TD" ) {
+						colHeaderIndexEnd = slotWidth - 1;
+						break;
+					}
+
+					slotWidth = slotWidth + ( cells[ j ].colspan || 1 );
+					
+				}
+				
+				
+				break;
+			}
+		}
+		
+		// First data cell found at row
+		console.log( "firstDataCellRowIndex: " + firstDataCellRowIndex ) ;
+		console.log( "colHeaderIndexStart: " + colHeaderIndexStart ) ;
+		console.log( "colHeaderIndexEnd: " + colHeaderIndexEnd ) ;
+		
+		// Then find the cellIndex of the first headerCell (th) for that row 
+		
+		
+		// Result Info: At the end we should know where the Data/Summary row and col is starting. 
+
+
+		// TEST-Structure: The number of slots defined by the cells in the first data-row should be equal to the table width slots dimension
+	}
+	
+	findColHeaderGroup( "tbl-1" );
+	findColHeaderGroup( "tbl-2" );
+	findColHeaderGroup( "tbl-3" );
+	findColHeaderGroup( "tbl-4" );
+	findColHeaderGroup( "tbl-5" );
+	findColHeaderGroup( "tbl-6" );
+	findColHeaderGroup( "tbl-7" );
+	
+</script>
+
+
+</body>
+</html>
